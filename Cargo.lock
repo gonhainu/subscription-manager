@@ -3,5 +3,29 @@
 version = 4
 
 [[package]]
+name = "adapter"
+version = "0.1.0"
+
+[[package]]
+name = "application"
+version = "0.1.0"
+
+[[package]]
+name = "core"
+version = "0.1.0"
+
+[[package]]
+name = "infrastructure"
+version = "0.1.0"
+
+[[package]]
+name = "registry"
+version = "0.1.0"
+
+[[package]]
+name = "shared"
+version = "0.1.0"
+
+[[package]]
 name = "subscription-manager"
 version = "0.1.0"

@@ -1,6 +1,25 @@
 [package]
 name = "subscription-manager"
 version = "0.1.0"
+edition.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "app"
+path = "src/bin/app.rs"
+
+[workspace]
+members = [
+  "core",
+  "application",
+  "adapter",
+  "infrastructure",
+  "registry",
+  "shared",
+]
+
+[workspace.package]
 edition = "2024"
+publish = false
 
 [dependencies]
