@@ -58,7 +58,6 @@ impl YearMonth {
     }
 }
 
-// 各ValueObjectのテスト
 #[cfg(test)]
 mod tests {
     use super::*;
