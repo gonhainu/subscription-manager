@@ -6,7 +6,7 @@ pub enum DomainError {
     InvalidYear(i32),
 
     #[error("月は1-12の範囲で指定してください: {0}")]
-    InvalidMonth(u32),
+    InvalidMonth(u8),
 }
 
 pub type DomainResult<T> = Result<T, DomainError>;

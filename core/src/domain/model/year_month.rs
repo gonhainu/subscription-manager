@@ -20,11 +20,11 @@ impl Year {
 pub struct Month(u8);
 
 impl Month {
-    pub fn new(month: u32) -> DomainResult<Self> {
+    pub fn new(month: u8) -> DomainResult<Self> {
         if !(1..=12).contains(&month) {
             return Err(DomainError::InvalidMonth(month));
         }
-        Ok(Self(month as u8))
+        Ok(Self(month))
     }
 
     pub fn value(&self) -> u8 {
@@ -45,7 +45,7 @@ impl YearMonth {
 
     pub fn from_values(year: i32, month: u8) -> DomainResult<Self> {
         let year = Year::new(year)?;
-        let month = Month::new(month.into())?;
+        let month = Month::new(month)?;
         Ok(Self::new(year, month))
     }
 
